@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Copyright (C) Vacasa, LLC - All Rights Reserved
+   This file and application is covered by the LICENSE file at https://vacasa.com/pst-viewer/license.html
+  -->
+
+  <meta charset="UTF-8">
+  <meta name="description" content="Quickly view Outlook email archives directly in your web browser. No need to download or install software, and no need to upload your PST data.">
+  <title>Vacasa PST viewer</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div>
+      <div class="jss2" style="width:100vw;height:100vh;display:flex;position:relative;overflow:hidden;">
+        <header class="jss22 jss28 jss14 jss15 jss20 mui-fixed jss3 jss4" style="background-color:#fff;box-shadow:0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12);width:100%;display:flex;z-index:1100;box-sizing:border-box;flex-shrink:0;flex-direction:column;top:0;left:auto;right:0;position:fixed;color:#333;background-color:RGBA(244, 192, 74, 1);transition:margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;width:calc(100% - 340px);transition:margin 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms,width 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;margin-left:340px;">
+          <div class="jss49 jss51 jss50" style="display:flex;position:relative;align-items:center;padding-left:16px;padding-right:16px;min-height:64px;">
+            <button tabindex="0" class="jss59 jss53 jss54 jss5 jss6" type="button" aria-label="open drawer" style="cursor:pointer;margin:0;border:0;display:inline-flex;outline:none;position:relative;user-select:none;align-items:center;border-radius:0;vertical-align:middle;justify-content:center;-moz-appearance:none;text-decoration:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;flex:0 0 auto;width:24px;color:rgba(0, 0, 0, 0.54);height:24px;padding:0;font-size:1.5rem;text-align:center;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:50%;color:inherit;margin-left:12px;margin-right:20px;display:none;">
+              <span class="jss58" style="width:100%;display:flex;align-items:inherit;justify-content:inherit;">
+                <svg class="jss62" focusable="false" viewbox="0 0 24 24" aria-hidden="true" style="fill:currentColor;width:1em;height:1em;display:inline-block;font-size:24px;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;user-select:none;flex-shrink:0;">
+                  <g>
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                  </g>
+                </svg>
+              </span>
+              <span class="jss69" style="top:0;left:0;width:100%;height:100%;display:block;z-index:0;position:absolute;overflow:hidden;border-radius:inherit;pointer-events:none;"></span>
+            </button>
+            <h2 class="jss76 jss82 jss95 jss92" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:1.3125rem;font-weight:500;font-family:Lato;line-height:1.16667em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:inherit;"></h2>
+          </div>
+        </header>
+        <div class="jss100" style="flex:0 0 auto;">
+          <div class="jss22 jss24 jss101 jss7 jss102 jss106" direction="right" style="background-color:#fff;box-shadow:none;top:0;flex:1 0 auto;height:100vh;display:flex;z-index:1200;outline:none;overflow-y:auto;flex-direction:column;-webkit-overflow-scrolling:touch;left:0;right:auto;border-right:1px solid rgba(0, 0, 0, 0.12);width:340px;height:100%;position:fixed;overflow:hidden;">
+            <div class="jss8" style="display:flex;padding:0 8px;min-height:64px;align-items:center;justify-content:flex-end;">
+              <a href="https://vacasa.com">
+                <img class="jss9" src="https://static-assets.boise.vacasa.com/logo/vacasa-logo-vertical-light.svg" alt="Logo for Vacasa" style="height:50px;">
+              </a>
+              <h1 class="jss76 jss10 jss81" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:1.5rem;font-weight:400;font-family:Lato;line-height:1.35417em;flex-grow:1;">PST Viewer</h1>
+              <button tabindex="0" class="jss59 jss53" type="button" style="color:inherit;cursor:pointer;margin:0;border:0;display:inline-flex;outline:none;position:relative;user-select:none;align-items:center;border-radius:0;vertical-align:middle;justify-content:center;-moz-appearance:none;text-decoration:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;flex:0 0 auto;width:24px;color:rgba(0, 0, 0, 0.54);height:24px;padding:0;font-size:1.5rem;text-align:center;transition:background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;border-radius:50%;">
+                <span class="jss58" style="width:100%;display:flex;align-items:inherit;justify-content:inherit;">
+                  <svg class="jss62" focusable="false" viewbox="0 0 24 24" aria-hidden="true" style="fill:currentColor;width:1em;height:1em;display:inline-block;font-size:24px;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;user-select:none;flex-shrink:0;">
+                    <g>
+                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+                    </g>
+                  </svg>
+                </span>
+                <span class="jss69" style="top:0;left:0;width:100%;height:100%;display:block;z-index:0;position:absolute;overflow:hidden;border-radius:inherit;pointer-events:none;"></span>
+              </button>
+            </div>
+            <hr class="jss111" style="height:1px;margin:0;border:none;flex-shrink:0;background-color:rgba(0, 0, 0, 0.12);">
+            <div class="jss115">
+              <div class="jss116" style="display:flex;align-items:center;padding-left:8px;padding-right:8px;">
+                <h3 class="jss76 jss117 jss83" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:1rem;font-weight:400;font-family:Lato;line-height:1.5em;flex:1 1 auto;">Folder View</h3>
+                <button tabindex="0" class="jss59 jss120 jss122 jss125" type="button" style="color:inherit;cursor:pointer;margin:0;border:0;display:inline-flex;padding:0;outline:none;position:relative;user-select:none;align-items:center;border-radius:0;vertical-align:middle;justify-content:center;-moz-appearance:none;text-decoration:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;color:rgba(0, 0, 0, 0.87);padding:8px 16px;font-size:0.875rem;min-width:64px;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;min-height:36px;box-sizing:border-box;line-height:1.4em;font-family:Lato;font-weight:500;border-radius:4px;text-transform:uppercase;">
+                  <span class="jss121" style="display:inherit;align-items:inherit;justify-content:inherit;">
+                    <svg class="jss62" focusable="false" viewbox="0 0 24 24" aria-hidden="true" style="fill:currentColor;width:1em;height:1em;display:inline-block;font-size:24px;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;user-select:none;flex-shrink:0;">
+                      <g>
+                        <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"></path>
+                      </g>
+                    </svg>
+                    <svg class="jss62" focusable="false" viewbox="0 0 24 24" aria-hidden="true" style="fill:currentColor;width:1em;height:1em;display:inline-block;font-size:24px;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;user-select:none;flex-shrink:0;">
+                      <g>
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="jss69" style="top:0;left:0;width:100%;height:100%;display:block;z-index:0;position:absolute;overflow:hidden;border-radius:inherit;pointer-events:none;"></span>
+                </button>
+              </div>
+            </div>
+            <hr class="jss111" style="height:1px;margin:0;border:none;flex-shrink:0;background-color:rgba(0, 0, 0, 0.12);">
+            <div class="jss152 jss148" style="overflow:auto;">
+              <ul class="jss159" style="margin:0;padding:0;position:relative;list-style:none;"></ul>
+            </div>
+          </div>
+        </div>
+        <main class="jss11 jss12" style="display:flex;min-width:0;flex-grow:1;transition:margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;margin-top:64px;margin-left:0;flex-direction:row;background-color:#fafafa;transition:margin 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;margin-left:340px;">
+          <div class="jss163 jss180" style="width:100%;display:flex;flex-wrap:wrap;box-sizing:border-box;justify-content:center;">
+            <div class="jss164 jss196" style="margin:0;box-sizing:border-box;flex-grow:0;max-width:50%;flex-basis:50%;">
+              <div class="jss22 jss26 jss23" style="background-color:#fff;border-radius:4px;box-shadow:0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);margin-top: 50px; padding: 16px;">
+                <h1 class="jss76 jss81 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:1.5rem;font-weight:400;font-family:Lato;line-height:1.35417em;margin-bottom:0.35em;">Welcome to the Vacasa PST viewer!</h1>
+                <noscript><h1 class="jss76 jss81 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:1.5rem;font-weight:400;font-family:Lato;line-height:1.35417em;margin-bottom:0.35em;">Warning! This page requires that JavaScript is enabeld.</h1></noscript>
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">This app will let you quickly view the contents of a PST or OST email archive.</p>
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">No file data or metadata is sent to our servers - all of the processing is done by your machine in the web
+                  browser.</p>
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">For questions or comments, please email
+                  <a href="mailto:itsupport@vacasa.com">itsupport@vacasa.com</a>.</p>
+                <hr class="jss111 jss114" style="height:1px;margin:0;border:none;flex-shrink:0;background-color:rgba(0, 0, 0, 0.12);background-color:rgba(0, 0, 0, 0.08);">
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">To get started, drag a PST or OST file to this browser window, or click below to select one.</p>
+                <input id="file" type="file" accept=".pst,.ost" multiple="" style="display: none;" disabled="">
+                <label for="file">
+                  <span tabindex="0" class="jss59 jss120 jss129 jss131 jss132 jss134" role="button" style="color:inherit;cursor:pointer;margin:0;border:0;display:inline-flex;padding:0;outline:none;position:relative;user-select:none;align-items:center;border-radius:0;vertical-align:middle;justify-content:center;-moz-appearance:none;text-decoration:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;padding:8px 16px;font-size:0.875rem;min-width:64px;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;min-height:36px;box-sizing:border-box;line-height:1.4em;font-family:Lato;font-weight:500;border-radius:4px;text-transform:uppercase;color:rgba(0, 0, 0, 0.87);box-shadow:0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);background-color:#e0e0e0;color:#fff;background-color:#804fff;">
+                    <span class="jss121" style="display:inherit;align-items:inherit;justify-content:inherit;">Open a PST or OST</span>
+                    <span class="jss69" style="top:0;left:0;width:100%;height:100%;display:block;z-index:0;position:absolute;overflow:hidden;border-radius:inherit;pointer-events:none;"></span>
+                  </span>
+                </label>
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;"></p>
+                <hr class="jss111 jss114" style="height:1px;margin:0;border:none;flex-shrink:0;background-color:rgba(0, 0, 0, 0.12);background-color:rgba(0, 0, 0, 0.08);">
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">Recent Changes:</p>
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">- Added ability to open OST files (including Outlook 2016 OST format)</p>
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">- Updated entire interface to include 2019 java updates</p>
+                <hr class="jss111 jss114" style="height:1px;margin:0;border:none;flex-shrink:0;background-color:rgba(0, 0, 0, 0.12);background-color:rgba(0, 0, 0, 0.08);">
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;">Copyright © 2020, Vacasa, LLC</p>
+                <p class="jss76 jss85 jss93" style="margin:0;display:block;color:rgba(0, 0, 0, 0.87);font-size:0.875rem;font-weight:400;font-family:Lato;line-height:1.46429em;margin-bottom:0.35em;"></p>
+              </div>
+            </div>
+          </div>
+        </main>
+        <button tabindex="0" class="jss59 jss120 jss129 jss131 jss132 jss134 jss13" type="button" style="color:inherit;cursor:pointer;margin:0;border:0;display:inline-flex;padding:0;outline:none;position:relative;user-select:none;align-items:center;border-radius:0;vertical-align:middle;justify-content:center;-moz-appearance:none;text-decoration:none;background-color:transparent;-webkit-appearance:none;-webkit-tap-highlight-color:transparent;padding:8px 16px;font-size:0.875rem;min-width:64px;transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;min-height:36px;box-sizing:border-box;line-height:1.4em;font-family:Lato;font-weight:500;border-radius:4px;text-transform:uppercase;color:rgba(0, 0, 0, 0.87);box-shadow:0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);background-color:#e0e0e0;color:#fff;background-color:#804fff;right:0;bottom:0;z-index:1501;position:fixed;">
+          <span class="jss121" style="display:inherit;align-items:inherit;justify-content:inherit;">raw props
+            <svg class="jss62" focusable="false" viewbox="0 0 24 24" aria-hidden="true" style="fill:currentColor;width:1em;height:1em;display:inline-block;font-size:24px;transition:fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;user-select:none;flex-shrink:0;">
+              <g>
+                <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"></path>
+              </g>
+            </svg>
+          </span>
+          <span class="jss69" style="top:0;left:0;width:100%;height:100%;display:block;z-index:0;position:absolute;overflow:hidden;border-radius:inherit;pointer-events:none;"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script crossorigin="" src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA--1');
+  </script>
+  <!-- Newsletter popup -->
+<script type="text/javascript" src="vendors.js">
+</script><script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
